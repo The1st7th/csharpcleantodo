@@ -1,0 +1,13 @@
+<h1>To Do List</h1>
+<ul>
+  @foreach(var item in Model)
+  {
+
+  <li>@item.GetId() @item.GetDescription() @item.Catname()</li>
+  }
+</ul>
+<p><a href="/items/new">Add a new item.</a></p>
+
+<form action="/items/delete" method="post">
+  <button type="submit" name="button">Clear All Items</button>
+</form>
